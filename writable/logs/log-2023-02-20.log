@@ -1,0 +1,84 @@
+ERROR - 2023-02-20 06:31:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'drr', 3306, '', 0)
+#1 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Model.php(835): CodeIgniter\Database\BaseConnection->query('SELECT o.ID as ...')
+#4 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\app\Controllers\Home.php(136): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(934): App\Controllers\Home->city()
+#6 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Shin\\D...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Model.php(835): CodeIgniter\Database\BaseConnection->query('SELECT o.ID as ...')
+#3 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\app\Controllers\Home.php(136): CodeIgniter\Model->__call('query', Array)
+#4 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(934): App\Controllers\Home->city()
+#5 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Shin\\D...')
+#9 {main}
+CRITICAL - 2023-02-20 06:31:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Model.php(835): CodeIgniter\Database\BaseConnection->query('SELECT o.ID as ID, o.NAME as \'NAME\', o.ADDRESS as \'ADDRESS\',
+                            o.NUMBER as \'NUMBER\', o.EMAIL_ADDRESS as EMAIL_ADDRESS, d.ID as DEPARTMENT_ID, d.NAME 
+                            as DEPARTMENT_NAME from official o INNER JOIN department d on d.ID = o.DEPARTMENT_ID')
+ 3 APPPATH\Controllers\Home.php(136): CodeIgniter\Model->__call('query', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->city()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-02-20 06:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-20 06:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-02-20 06:32:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'drr', 3306, '', 0)
+#1 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\app\Controllers\Home.php(26): CodeIgniter\Model->__call('get', Array)
+#6 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(934): App\Controllers\Home->signIn()
+#7 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Shin\\D...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\app\Controllers\Home.php(26): CodeIgniter\Model->__call('get', Array)
+#5 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(934): App\Controllers\Home->signIn()
+#6 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Shin\Desktop\DRR-Project\govt-web-system\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Shin\\D...')
+#10 {main}
+CRITICAL - 2023-02-20 06:32:22 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `accounts`
+WHERE `USERNAME` = :USERNAME:
+AND `PASSWORD` = :PASSWORD:', [...], false)
+ 3 SYSTEMPATH\Model.php(839): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(26): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->signIn()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
